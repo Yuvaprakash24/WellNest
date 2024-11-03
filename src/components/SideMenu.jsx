@@ -4,7 +4,7 @@ import AssessmentIcon from '@mui/icons-material/Assessment';
 import GamesIcon from '@mui/icons-material/Games';
 import BookIcon from '@mui/icons-material/Book';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
-import MedicationIcon from '@mui/icons-material/Medication';
+import EventIcon from '@mui/icons-material/Event';
 import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 
 const SideMenu = () => {
@@ -28,7 +28,7 @@ const SideMenu = () => {
                 { text: 'Therapies and Games', icon: <GamesIcon />, path: '/therapies' },
                 { text: 'Blogs', icon: <BookIcon />, path: '/blogs' },
                 { text: 'Doctors', icon: <LocalHospitalIcon />, path: '/doctors' },
-                { text: 'Track your Medication', icon: <MedicationIcon />, path: '/medication' },
+                { text: 'Upcoming Workshops', icon: <EventIcon />, path: '/workshopcover' },
                 { text: 'Self Assessment', icon: <SelfImprovementIcon />, path: '/self-assessment' },
             ].map((item) => (
                 <ListItem button key={item.text} component={Link} to={item.path}>

@@ -18,8 +18,8 @@ import AutoAwesomeSharpIcon from '@mui/icons-material/AutoAwesomeSharp';
 const pages = [
   { label: 'Home', link: '/home' },
   { label: 'How it works', link: '/how-it-works' },
-  // { label: 'Contact', link: '/contact' },
-  { label: 'Blogs', link: '/blogs' },
+  { label: 'Blogs', link: '/blogpage' },
+  { label: 'Workshop', link: '/workshops' },
 ];
 
 function ResponsiveAppBar() {
@@ -122,18 +122,6 @@ function ResponsiveAppBar() {
                   </Typography>
                 </MenuItem>
               ))}
-              {user && user.email === "yuvaprakashsai@gmail.com" && (
-                <Button
-                  key="AdminDashboard"
-                  component={Link}
-                  to="/admin-dashboard"
-                  onClick={handleCloseNavMenu}
-                  size='small'
-                  style={{ color: 'black', textDecoration: 'none', display: "flex", justifyContent: 'center' }}
-                >
-                  Admin
-                </Button>
-              )}
             </Menu>
           </Box>
 
@@ -207,10 +195,7 @@ function ResponsiveAppBar() {
                 <MenuItem onClick={() => { handleCloseUserMenu(); navigate('/profile'); }}>
                   <Typography textAlign="center">Profile</Typography>
                 </MenuItem>
-                <MenuItem onClick={() => { handleCloseUserMenu(); navigate('/order-history'); }}>
-                  <Typography textAlign="center">Order History</Typography>
-                </MenuItem>
-                <MenuItem onClick={() => { handleCloseUserMenu(); navigate('/contact'); }}>
+                <MenuItem onClick={() => { handleCloseUserMenu(); navigate('/contact-us'); }}>
                   <Typography textAlign="center">Assistance</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>

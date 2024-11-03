@@ -14,7 +14,7 @@ const Footer = () => {
           <Typography variant="h4" color="textPrimary" gutterBottom>
             Menu
           </Typography>
-          <Link to="" style={{textDecoration:'none'}}><Typography variant='h6' color="black" sx={{ '&:hover': { textDecoration: 'underline' } }}>About</Typography></Link>
+          <Link to="/home" style={{textDecoration:'none'}}><Typography variant='h6' color="black" sx={{ '&:hover': { textDecoration: 'underline' } }}>Home</Typography></Link>
           <Link to="/blogs" style={{textDecoration:'none'}}><Typography variant='h6' color="black" sx={{ '&:hover': { textDecoration: 'underline' } }}>Blog</Typography></Link>
           <Link to="/therapies" style={{textDecoration:'none'}}><Typography variant='h6' color="black" sx={{ '&:hover': { textDecoration: 'underline' } }}>Games</Typography></Link>
           <Link to="/doctors" style={{textDecoration:'none'}}><Typography variant='h6' color="black" sx={{ '&:hover': { textDecoration: 'underline' } }}>Doctors</Typography></Link>

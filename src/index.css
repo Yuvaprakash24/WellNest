@@ -24,3 +24,23 @@
     background-color: #1976d2;
     color: whitesmoke;
 }
+
+.button-hover-reverse:hover{
+    background-color: whitesmoke;
+    color: #1976d2;
+    border: solid #1976d2 2px;
+}
+
+.connect-button:hover{
+    color: #FFD58B;
+    background-color: whitesmoke;
+    border: solid #FFD58B 2px;
+}
+
+.hoverEffect {
+    text-decoration: none;
+    color: black;
+}
+.hoverEffect:hover {
+    color: #1976d2;
+}

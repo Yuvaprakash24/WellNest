@@ -4,7 +4,7 @@ import TherapiesAndGames from './TherapiesAndGames';
 import Assessment from './Assessment';
 import BlogCover from './BlogCover';
 import Doctors from './Doctors';
-import Medication from './Medication';
+import Medication from './WorkshopCover';
 import SelfAssessment from './SelfAssessment';
 import { useTheme } from '@mui/material/styles';
 import Footer from './Footer';
