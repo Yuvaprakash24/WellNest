@@ -5,6 +5,7 @@ import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { Container, TextField, Button, Typography, Box, Alert } from '@mui/material';
 import GoogleIcon from '@mui/icons-material/Google';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -39,6 +40,12 @@ const Signup = () => {
       await updateProfile(user, {
         displayName: username,
         photoURL,
+      });
+
+      // Send welcome email
+      await axios.post('https://wellnest-backend.onrender.com/send-welcome-email', {
+        email: user.email,
+        displayName: username || "WellNest Member",
       });
 
       // Save user details in local storage

@@ -88,6 +88,16 @@ const BookWorkshop = () => {
         e.preventDefault();
         try {
           await addDoc(collection(db, 'workshop-registrations'), formData);
+          await fetch('https://wellnest-backend.onrender.com/send-registration-confirmation', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              email: formData.email,
+              fullName: formData.fullName,
+            }),
+          });
           alert("Form submitted successfully!");
           setFormData({
             fullName: '',
@@ -226,7 +236,8 @@ const BookWorkshop = () => {
                     position: 'sticky',
                     top: 75,
                     maxHeight: 'fit-content',
-                    ml:{xs:4}
+                    ml:{xs:4},
+                    mr:{xs:4}
                 }}
                 >
                 <Typography variant="h5" mb={2} fontWeight="bold">
